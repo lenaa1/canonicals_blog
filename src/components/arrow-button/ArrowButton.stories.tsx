@@ -12,10 +12,13 @@ type Story = StoryObj<typeof ArrowButton>;
 
 export const ArrowButtonStory: Story = {
 	render: () => {
-        const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+		const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 		return (
 			<>
-				<ArrowButton sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen} />
+				<ArrowButton
+					sidebarIsOpen={sidebarIsOpen}
+					setSidebarIsOpen={setSidebarIsOpen}
+				/>
 			</>
 		);
 	},

@@ -16,14 +16,15 @@ const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
 
 const App = () => {
-
 	const [appliedStyles, setAppliedStyles] = useState<{ [key: string]: string }>(
-		{'--font-size': '18px',
-		'--font-color': '#000000',
-		'--bg-color': '#FFFFFF',
-		'--font-family' : 'Open Sans',
-		'--container-width': '1394px'});;
-
+		{
+			'--font-size': '18px',
+			'--font-color': '#000000',
+			'--bg-color': '#FFFFFF',
+			'--font-family': 'Open Sans',
+			'--container-width': '1394px',
+		}
+	);
 
 	return (
 		<div
@@ -37,7 +38,10 @@ const App = () => {
 					'--bg-color': appliedStyles['--bg-color'],
 				} as CSSProperties
 			}>
-			<ArticleParamsForm appliedStyle={appliedStyles} setAppliedStyles={setAppliedStyles}/>
+			<ArticleParamsForm
+				appliedStyle={appliedStyles}
+				setAppliedStyles={setAppliedStyles}
+			/>
 			<Article />
 		</div>
 	);
